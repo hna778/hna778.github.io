@@ -3219,3 +3219,20 @@ input, select, textarea {
 			}
 
 	}
+
+/* Fix: make work-item links clickable */
+.work-item a.image {
+	position: relative;
+	z-index: 2;
+  }
+  
+  .work-item .image::before,
+  .work-item .image::after {
+	pointer-events: none;
+  }
+  
+/* Disable thumbnail overlays */
+.work-item .image:before,
+.work-item .image:after {
+  display: none !important;
+}
